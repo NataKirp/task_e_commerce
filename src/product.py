@@ -1,5 +1,6 @@
 class Product:
     """Класс для создания продукта."""
+
     name: str
     description: str
     price: float
@@ -11,6 +12,3 @@ class Product:
         self.description = description
         self.price = price
         self.quantity = quantity
-
-    def __str__(self):
-        return f"{self.name} - {self.description} - {self.price} - {self.quantity}"
