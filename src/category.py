@@ -24,7 +24,7 @@ class Category:
         total_category_products = 0
         for product in self.__products:
             total_category_products += product.quantity
-        return f'{self.name}, количество продуктов: {total_category_products} шт.'
+        return f"{self.name}, количество продуктов: {total_category_products} шт."
 
     def add_product(self, product: Product):
         """Метод для добавления продукта в категорию."""
@@ -35,7 +35,7 @@ class Category:
     @property
     def products(self):
         """Геттер для вывода списка товаров"""
-        product_str = ''
+        product_str = ""
         for product in self.__products:
-            product_str += f'{str(product)}\n'
+            product_str += f"{str(product)}\n"
         return product_str
