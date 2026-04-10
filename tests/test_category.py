@@ -17,7 +17,11 @@ def test_category_init(category_1, category_2):
 
 
 def test_add_product():
-    category = Category('Test Category', 'Category Description')
-    product = Product('Test Product', 'Product Description', 100.0, 10)
+    category = Category("Test Category", "Category Description")
+    product = Product("Test Product", "Product Description", 100.0, 10)
     category.add_product(product)
-    assert 'Test Product' in category.products
+    assert "Test Product" in category.products
+
+
+def test_category_str(category_1):
+    assert str(category_1) == "Category 1, количество продуктов: 13 шт."
