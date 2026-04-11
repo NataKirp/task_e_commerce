@@ -53,6 +53,11 @@ class Smartphone(Product):
         self.memory = memory
         self.color = color
 
+    def __add__(self, other):
+        if type(other) is Smartphone:
+            return self.quantity * self.__price + other.quantity * other.__price
+        raise TypeError
+
 
 class LawnGrass(Product):
     def __init__(self, name, description, price, quantity, country, germination_period, color):
@@ -60,3 +65,8 @@ class LawnGrass(Product):
         self.country = country
         self.germination_period = germination_period
         self.color = color
+
+    def __add__(self, other):
+        if type(other) is LawnGrass:
+            return self.quantity * self.__price + other.quantity * other.__price
+        raise TypeError
