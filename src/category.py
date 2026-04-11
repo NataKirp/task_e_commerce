@@ -1,4 +1,4 @@
-from src.product import Product
+from src.product import Product, Smartphone, LawnGrass
 
 
 class Category:
@@ -28,9 +28,11 @@ class Category:
 
     def add_product(self, product: Product):
         """Метод для добавления продукта в категорию."""
-        product.category = self  # Назначаем категорию продукту
-        self.__products.append(product)
-        Category.product_count += 1
+        if isinstance(product, Product):
+            self.__products.append(product)
+            Category.product_count += 1
+        else:
+            raise TypeError
 
     @property
     def products(self):
