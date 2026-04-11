@@ -46,9 +46,11 @@ class Product:
 
 
 class Smartphone(Product):
-    """ Класс для товаров категории 'Смартфон' """
+    """Класс для товаров категории 'Смартфон'"""
 
-    def __init__(self, name, description, price, quantity, efficiency, model, memory, color):
+    def __init__(
+        self, name, description, price, quantity, efficiency, model, memory, color
+    ):
         super().__init__(name, description, price, quantity)
         self.efficiency = efficiency
         self.model = model
@@ -62,9 +64,11 @@ class Smartphone(Product):
 
 
 class LawnGrass(Product):
-    """ Класс для товаров категории 'Трава газонная' """
+    """Класс для товаров категории 'Трава газонная'"""
 
-    def __init__(self, name, description, price, quantity, country, germination_period, color):
+    def __init__(
+        self, name, description, price, quantity, country, germination_period, color
+    ):
         super().__init__(name, description, price, quantity)
         self.country = country
         self.germination_period = germination_period
