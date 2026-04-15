@@ -75,3 +75,10 @@ def test_lawn_grass_add_not_product(grass_1):
 def test_diff_category_add_error(smartphone_1, grass_1):
     with pytest.raises(TypeError):
         result = smartphone_1 + grass_1
+
+
+def test_raises_add_zero_quantity():
+    with pytest.raises(
+        ValueError, match="Товар с нулевым количеством не может быть добавлен."
+    ):
+        product_1 = Product("Iphone 15", "512GB, Gray space", 210000.0, quantity=0)
