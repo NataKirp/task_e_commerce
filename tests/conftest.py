@@ -95,3 +95,8 @@ def grass_2():
         "5 дней",
         "Темно-зеленый",
     )
+
+
+@pytest.fixture
+def category_without_products():
+    return Category(name="Empty category", description="Some description")
